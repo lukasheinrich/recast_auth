@@ -31,6 +31,8 @@ Host svn.cern.ch
 	GSSAPIDelegateCredentials yes
 EOF
 
+#make sure permissions are correct
+chmod 600 ~/.ssh/config
 
 ###
 #   ACCESS TO MAIN RECAST NODE
