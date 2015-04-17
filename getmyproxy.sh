@@ -10,6 +10,7 @@ export X509_USER_KEY=$scriptdir/privkey.pem
 
 if [ ! $(stat --format=%a "$X509_USER_KEY") -eq 400 ];then
   echo "warning: permissions on private key: $X509_USER_KEY are not correct. should be 400";
+  exit 1
 fi
   
 
