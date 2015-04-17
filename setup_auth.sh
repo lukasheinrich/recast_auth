@@ -41,12 +41,13 @@ chmod 600 ~/.ssh/config
 # remove the host key for recast-demo from the known host file
 if [ -e ~/.ssh/known_hosts ];then
 	ssh-keygen -R recast-demo
+	ssh-keygen -R svn.cern.ch
 fi
 
 # add a fresh host key
 
 ssh-keyscan -t rsa recast-demo >> ~/.ssh/known_hosts
-
+ssh-keyscan -t rsa svn.cern.ch >> ~/.ssh/known_hosts
 
 ###
 #   GRID ACCESS
