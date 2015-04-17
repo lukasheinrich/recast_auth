@@ -55,7 +55,7 @@ ssh-keyscan -t rsa svn.cern.ch >> ~/.ssh/known_hosts
 
 # create a host certificate signing request and private key
 
-openssl req -new -subj "/CN=$(hostname)" -out newcsr.csr -nodes -sha512 -newkey rsa:2048
+openssl req -new -subj "/CN=$(hostname).cern.ch" -out newcsr.csr -nodes -sha512 -newkey rsa:2048
 
 # quoting alex pearce https://alexpearce.me/2014/10/setting-up-flask-with-apache-and-shibboleth/
 # This will create two files, newcsr.csr and privkey.pem. The former
