@@ -9,8 +9,8 @@ if [ ! $(stat --format=%a "$X509_USER_KEY") -eq 400 ];then
   exit 1
 fi
 
-if ! type "voms-proxy-init" > /dev/null;then
 source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+if ! type "voms-proxy-init" > /dev/null;then
 localSetupEmi
 fi
   
